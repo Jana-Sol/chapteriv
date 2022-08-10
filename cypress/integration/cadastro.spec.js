@@ -50,6 +50,7 @@ describe('Cadastro', () => {
         cy.get('input[name=pwdConfirm]').type('J@n123456')
         cy.contains('Finalizar cadastro').click()
         cy.url().should('contain' , 'listagem')
+        
        
     });
 });
