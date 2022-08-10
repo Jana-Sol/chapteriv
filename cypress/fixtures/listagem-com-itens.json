@@ -1,0 +1,30 @@
+[
+    {
+        "firstName": "Kamila",
+        "lastName": "Maravilha",
+        "adress": "Rua das flores, 150",
+        "emailAdress": "kamilamaravilha@gmail.com",
+        "radioGender": "f",
+        "checks": [
+            "Netflix"
+        ],
+        "selectCountries": "Hong Kong",
+        "selectYears": "1997",
+        "selectMonths": "Setembro",
+        "pwd": "Kk12345"
+    },
+    {
+        "firstName": "Lucas",
+        "lastName": "Belorizonte",
+        "adress": "Rua da alegria, 1050",
+        "emailAdress": "lucasbello@gmail.com",
+        "radioGender": "m",
+        "checks": [
+            "Livros"
+        ],
+        "selectCountries": "Dinamarca",
+        "selectYears": "1975",
+        "selectMonths": "Maio",
+        "pwd": "Lbelo1999"
+    }
+]
