@@ -13,16 +13,16 @@ on:
 jobs:
   build:
 
-# Máquina ou ambiente
+#   Máquina ou ambiente
     runs-on: ubuntu-latest
 
-# Passos   
+#   Passos   
     steps:
     
-# Download do código    
+#   Download do código    
     - uses: actions/checkout@v3
     
-# Setup da versão Node    
+#   Setup da versão Node    
     - name: Use Node.js 
       uses: actions/setup-node@v3
       with:
@@ -38,10 +38,10 @@ jobs:
     
     - run: npm run report:mocha
     
-# GITHUB PAGES -> publicar o relatório
-  - name: Deploy to GitHub Pages
-    uses: JamesIves/github-pages-deploy-action@v4.4.0
-    with:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BRANCH: gh-pages
-      FOLDER: mochawesome-report
+#   GITHUB PAGES -> publicar o relatório
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: mochawesome-report
