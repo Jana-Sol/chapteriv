@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-20T02:53:47.339Z",
+    "end": "2022-08-20T02:53:56.487Z",
+    "duration": 9148,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f254726d-fe0d-4950-857b-1353230833b5",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "37a75612-f80d-44d8-94fd-807c85b75705",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "fullTitle": "Cadastro Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "timedOut": null,
+              "duration": 5834,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://form-agilizei.netlify.app'); // Inputs de texto / textarea / email --> type\n// input[name=fisrtName]\n// input[name=lastname]\n// textarea[name=adress]\n// input[name=emailAdress]\n// Inputs radio / checkboxes --> check\n// input[value=f]\n// input[type=checkbox]\n//  Inputs do tipo combobx / select --> select\n// select#countries\n// select#years\n// select#months\n// select#days\n// Inputs do tipo button\n// cy.contains(nome do botão)\n// Assercao para confirmação de que a aplicação foi direcionada para a listagem\n// cy.url().should(nome do comando , referencia)   \ncy.get('input[name=firstName]').type(chance.first());\ncy.get('input[name=lastName]').type(chance.last());\ncy.get('textarea[name=adress]').type(chance.address());\ncy.get('input[name=emailAdress]').type(chance.email());\ncy.get('input[value=f]').check();\ncy.get('input[type=checkbox]').check('Netflix');\ncy.get('input[type=checkbox]').check('Livros');\ncy.get('select#countries').select('Japão', {\n  force: true\n});\ncy.get('select#years').select('1990', {\n  force: true\n});\ncy.get('select#months').select('Dezembro', {\n  force: true\n});\ncy.get('select#days').select('15', {\n  force: true\n});\ncy.get('input[name=pwd]').type('J@n123456');\ncy.get('input[name=pwdConfirm]').type('J@n123456');\ncy.contains('Finalizar cadastro').click();\ncy.url().should('contain', 'listagem');",
+              "err": {},
+              "uuid": "5459047a-15b6-45f4-849b-0933ce7186ab",
+              "parentUUID": "37a75612-f80d-44d8-94fd-807c85b75705",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5459047a-15b6-45f4-849b-0933ce7186ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
